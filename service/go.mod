@@ -1,3 +1,1 @@
-module github.com/hubit-space/hubit-space/service
-
-go 1.22
+exit status 1exit status 1exit status 1exit status 1

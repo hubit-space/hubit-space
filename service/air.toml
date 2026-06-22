@@ -1,0 +1,38 @@
+package repository
+
+import (
+	"context"
+	"hubit-space/service/config"
+	"hubit-space/service/model"
+	"log"
+
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+type ruleAccessRepository struct {
+	client *mongo.Client
+}
+
+type RuleAccessRepository interface {
+	GetRuleAccessDetail(roleCode string, menuCode string) (model.RuleAccess, error)
+}
+
+func NewRuleAccessRepository(client *mongo.Client) *ruleAccessRepository {
+	return &ruleAccessRepository{
+		client: client,
+	}
+}
+
+func (r *ruleAccessRepository) GetRuleAccessDetail(roleCode string, menuCode string) (model.RuleAccess, error) {
+	collection := config.GetCollection(r.client, "role_access_rule")
+
+	var ruleAccess model.RuleAccess
+	err := collection.FindOne(context.Background(), bson.M{"role_code": roleCode, "menu_code": menuCode}).Decode(&ruleAccess)
+	if err != nil {
+		log.Println("Error fetching rule access:", err)
+		return model.RuleAccess{}, err
+	}
+
+	return ruleAccess, nil
+}

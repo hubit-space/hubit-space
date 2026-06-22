@@ -1,0 +1,23 @@
+package router
+
+import (
+	"hubit-space/gateway/handler"
+	"hubit-space/gateway/middleware"
+	"hubit-space/gateway/repository"
+
+	"github.com/gin-gonic/gin"
+	"github.com/go-resty/resty/v2"
+	"github.com/redis/go-redis/v9"
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+func SetupAuthRouter(route *gin.Engine, mongoClient *mongo.Client, redisClient *redis.Client, client *resty.Client) {
+	repo := repository.NewUserRepository(mongoClient, client)
+	handler := handler.NewAuthHandler(repo, redisClient)
+
+	routes := route.Group("/")
+	{
+		routes.POST("/login", handler.Login)
+		routes.POST("/refresh-token", middleware.AuthMiddleware(), handler.RefreshToken)
+	}
+}
