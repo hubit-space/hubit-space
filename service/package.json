@@ -1,0 +1,11 @@
+{
+  "name": "hubit-space.service",
+  "version": "1.0.0",
+  "description": "Hubit Space Backend Service",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "hubit-space.ui",
+  "version": "1.0.0",
+  "description": "Hubit Space UI",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {}
+}
