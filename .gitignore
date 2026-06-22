@@ -1,8 +1,21 @@
 node_modules/
 .env
 *.log
-.DS_Store
 dist/
 build/
 .vscode/
 .idea/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# OS
+.DS_Store
+Thumbs.db
