@@ -1,0 +1,41 @@
+devdwita_db_user
+jgengwUK5F40qbXy
+
+Your current IP address (103.165.229.226)
+mongodb+srv://devdwita_db_user:jgengwUK5F40qbXy@jastip-cluster.pfre47e.mongodb.net/
+
+
+
+postgresql://postgres.xvwcvyypruuzegtzaxcq:[YOUR-PASSWORD]@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
+
+host : aws-1-ap-northeast-1.pooler.supabase.com
+port: 5432
+database: postgres
+user: postgres.xvwcvyypruuzegtzaxcq
+
+
+PORT=8080
+JWT_SECRET_KEY='hubit-space#742b4f5bb3147629c4d5f4cb3cd79842efab672b0417#2025'
+
+SECURITY_CODE_HUBIT='91b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4ck19skdj8fm'
+
+
+BASE_URL_SERVICE='http://localhost:8084'
+BASE_URL_APPS_SERVICE='http://192.168.3.86:9909'
+
+MONGO_HOST='jastip-cluster.pfre47e.mongodb.net'
+MONGO_USER='devdwita_db_user'
+MONGO_PASSWORD='jgengwUK5F40qbXy'
+MONGO_DB_NAME='HubitSpace'
+
+DB_HOST=aws-1-ap-northeast-1.pooler.supabase.com
+DB_PORT=5432
+DB_NAME=postgres
+DB_USER=postgres.xvwcvyypruuzegtzaxcq
+DB_PASSWORD=jgengwUK5F40qbXy
+
+
+REDIS_HOST=huge-turkey-134498.upstash.io:6379
+REDIS_PASSWORD=gQAAAAAAAg1iAAIgcDJmNzU2YWYxZGZhY2I0ZmM2OGE0OTllNjFmNzU5YjViYQ
+REDIS_DB=0
+REDIS_TLS=true
